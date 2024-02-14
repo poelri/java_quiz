@@ -12,7 +12,7 @@ public class Quiz4 {
 
          */
         int value = 356;
-        System.out.println(value - (value % 300) );
+        System.out.println(value / 100 * 100 );
     }
 
 }
