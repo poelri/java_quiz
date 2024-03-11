@@ -105,8 +105,8 @@ public class CustomerApplication {
         }
 
         //'기존에 저장되어 있던 포인트 + 사용할 포인트'을 빼서 잔고에 추가해준다.
-        if( customer.point >= 500 ){
-            if( customer.point < money) {
+        if( customer.getPoint() >= 500 ){
+            if( customer.getPoint() < money) {
                 System.out.println(" 포인트가 부족합니다 ");
             } else {customer.setPoint(customer.getPoint() - money);
                 System.out.println("결과: 포인트가 사용 완료되었습니다.");}
@@ -140,11 +140,11 @@ public class CustomerApplication {
         if (money >= 2000){
             money *= 1.1;
             System.out.println("결과: 10% 더 적립 완료되었습니다.");
-            System.out.println(customer.point);
+            System.out.println(customer.getPoint());
         }
             customer.setPoint(customer.getPoint() + money);
             System.out.println("결과: 적립 완료되었습니다.");
-            System.out.println(customer.point);
+            System.out.println(customer.getPoint());
 
 
 
